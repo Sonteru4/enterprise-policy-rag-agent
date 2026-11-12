@@ -1,12 +1,8 @@
 # Enterprise Policy Intelligence Agent
 
-Guardrailed, privacy-first RAG platform for institutional policy documents — upload, analyze, and query internal PDFs without public retrieval.
+Guardrailed, privacy-first RAG for institutional policy documents. Upload, analyze, and query internal PDFs without sending them to a public retrieval service.
 
-## Overview
-
-This is a production-style document intelligence system built for schools, nonprofits, and community institutions that need private AI over internal policy files. Users upload PDF or TXT documents, which are chunked, embedded with sentence-transformers, and indexed in a local FAISS vector store. A FastAPI backend exposes upload and query endpoints; a Streamlit frontend provides the chat UI.
-
-The system ships two specialized agents: a **Document Analyzer** that flags outdated content and duplicate chunks into Excel audit reports, and a **Faculty Onboarding Agent** that generates Week 1 checklists and safety quizzes from policy excerpts. Guardrails block sensitive query terms before they reach the LLM.
+Users upload PDF or TXT files, which are chunked, embedded with sentence-transformers, and indexed in a local FAISS store. A FastAPI backend exposes upload and query endpoints, and a Streamlit frontend provides the chat UI. Guardrails block sensitive query terms before they reach the model. Two specialized agents ship with the repo: a document analyzer that flags outdated or duplicate chunks, and a faculty-onboarding agent that builds checklists and safety quizzes from policy excerpts.
 
 ## Tech Stack
 
